@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c0d1bcf1;
+  align-items: center;
+}
+
+.centered-div {
+  text-align: center;
+  padding: 150px;
+  border-radius: 29px;
+  background-color: #a2a2a2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 2.1);
+}
+
+.div-Input{
+  display: flex;
+  flex-direction: column;
+}
+
+.div-Input input{
+  margin-bottom: 10%;
+  height: 2pc;
+  border-radius: 1pc;
+}
+.div-Input button{
+  margin-bottom: 10%;
+  height: 2pc;
+  border-radius: 1pc;
+  background-color: #aefad0;
+}
+
+.div-Input h3{
+  color: #fa0000;
+}
+
+
+/* Agrega estilos adicionales según tus necesidades */
+.centered-div h1 {
+  color: #333333; /* Color del texto */
+}
+
+.centered-div p {
+  color: #666666; /* Color del texto secundario */
+}
+.div-bodega{
+}
+
+.top {
+  background-color: #f1aaaa;
+}
+
+.mid {
+  background-color: #ffefef;
+}
+
+.bot {
+  background-color: #000000;
+}

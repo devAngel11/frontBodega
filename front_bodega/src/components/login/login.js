@@ -6,6 +6,8 @@ const Login = () => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [userId, setUserId] = useState("");
+  const [rol, setRol] = useState("");
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
@@ -29,6 +31,8 @@ const Login = () => {
           setError(res.data.mensaje);
         } else {
           setError("");
+          localStorage.setItem("userId", res.data.id);
+
           if (res.data.rol === 3) {
             navigate("/VistaAdmin");
           } else if (res.data.rol === 2) {
@@ -44,29 +48,31 @@ const Login = () => {
   };
 
   return (
-    <div className="centered-div">
-      <div className="div-Titulo">
-        <h1>Iniciar Sesion</h1>
+    <div class="centered-container">
+      <div className="centered-div">
+        <div className="div-Titulo">
+          <h1>Iniciar Sesion</h1>
+        </div>
+        <div className="div-Input">
+          <input
+            type="text"
+            name="usuario"
+            placeholder="Ingrese Rut"
+            value={usuario}
+            onChange={handleInputChange}
+          ></input>
+          <input
+            type="password"
+            name="password"
+            placeholder="Ingrese Contraseña"
+            value={password}
+            onChange={handleInputChange}
+          ></input>
+          <h3>{error}</h3>
+          <button onClick={validarUsuario}>Iniciar Sesion</button>
+        </div>
+        <div className="div-back"></div>
       </div>
-      <div className="div-Input">
-        <input
-          type="text"
-          name="usuario"
-          placeholder="Ingrese Rut"
-          value={usuario}
-          onChange={handleInputChange}
-        ></input>
-        <input
-          type="password"
-          name="password"
-          placeholder="Ingrese Contraseña"
-          value={password}
-          onChange={handleInputChange}
-        ></input>
-        <h3>{error}</h3>
-        <button onClick={validarUsuario}>Iniciar Sesion</button>
-      </div>
-      <div className="div-back"></div>
     </div>
   );
 };

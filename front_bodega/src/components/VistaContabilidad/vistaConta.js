@@ -26,7 +26,6 @@ const VistaContabilidad = () => {
       <div>
         {graficoSeleccionado === "GraficoA" && <GraficoA />}
         {graficoSeleccionado === "GraficoB" && <GraficoB />}
-        {graficoSeleccionado === "GraficoC" && <GraficoC />}
       </div>
     </div>
   );
